@@ -86,7 +86,7 @@ classdef GenHyperDist
             end
             
             p = size(X,1);
-            wFun = @(d) k * sqrt(psi./(chi+(k*d))).*besselk(lambda-p/2+1, sqrt(psi*(chi+(k*d))))./besselk(lambda-p/2, sqrt(psi*(chi+(k*d)))) - 2*(lambda-p/2)./(chi+(k*d));
+            wFun = @(d) k * (sqrt(psi./(chi+(k*d))).*besselk(lambda-k*p/2+1, sqrt(psi*(chi+(k*d))))./besselk(lambda-k*p/2, sqrt(psi*(chi+(k*d)))) - 2*(lambda-k*p/2)./(chi+(k*d)));
             [muHat, sigmaHat, omegaHat] = solveMLE(X, wFun, mu0, sigma0, tol);
         end
         

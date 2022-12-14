@@ -73,6 +73,8 @@ if isempty(r_ref) || pp ~= p || ~strcmp(f_details.function, f_func) || ~isequal(
     r_ref = linspace(0, R_REF_MAX_SURV(r_ref_max), N_REF_SAMPLES);
     % Integrate PDF to get CDF at each reference value r_ref
     FRef = arrayfun(@(r) integral(@(rr) f(rr), 0, r, 'reltol', REL_TOL, 'abstol', ABS_TOL), r_ref(2:end));
+    % Inf is a numerical error
+    FRef(isinf(FRef)) = NaN;
     % Add F(0)=0
     FRef = [0, FRef];
     

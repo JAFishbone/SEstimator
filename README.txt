@@ -1,7 +1,10 @@
 Copyright (C) 2020-2022 Justin A Fishbone
 
 This package contains the S-Estimator package that includes the S-q estimator discussed in:
-Fishbone, J.A., Mili, L. (2023?). New Highly Efficient High-Breakdown Estimator of Multivariate Scatter and Location for Elliptical Distributions. Canadian Journal of Statistics.
+
+Fishbone, J.A., Mili, L. (Accepted 2022). New Highly Efficient High-Breakdown Estimator of Multivariate Scatter and Location for Elliptical Distributions. Canadian Journal of Statistics.
+
+Fishbone, J.A., Mili, L. (2023?). Highly Robust Complex Covariance Estimators with Applications to Sensor Array Processing.
 ...
 
 INSTALLATION

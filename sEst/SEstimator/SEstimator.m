@@ -90,7 +90,11 @@ classdef SEstimator < handle % S-Estimator
         %%% enlargeTun(): Enlarge the tuning parameter so sufficient samples have positive weight -- Used by obj.estimate()
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         function enlargeTun(obj, ds, minValidSamples)
-            obj.tunEnlarged = fzero(@(tuning) obj.numValidSamples(ds, tuning) - minValidSamples, [obj.tun0, obj.maxTun]);
+            if obj.numValidSamples(ds, obj.maxTun) < minValidSamples
+                obj.tunEnlarged = obj.maxTun;
+            else
+                obj.tunEnlarged = fzero(@(tuning) obj.numValidSamples(ds, tuning) - minValidSamples, [obj.tun0, obj.maxTun]);
+            end
             obj.tun = obj.tunEnlarged;
         end
     end
