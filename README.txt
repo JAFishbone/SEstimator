@@ -1,11 +1,13 @@
-Copyright (C) 2020-2022 Justin A Fishbone
+Copyright (C) 2020-2023 Justin A Fishbone
 
-This package contains the S-Estimator package that includes the S-q estimator discussed in:
+This package contains the S-Estimator package that includes the Sq-estimator discussed in:
 
-Fishbone, J.A., Mili, L. (Accepted 2022). New Highly Efficient High-Breakdown Estimator of Multivariate Scatter and Location for Elliptical Distributions. Canadian Journal of Statistics.
+Fishbone, J., Mili, L. (Accepted 2022). "New Highly Efficient High-Breakdown Estimator of Multivariate Scatter and Location for Elliptical Distributions." Canadian Journal of Statistics, doi: 10.1002/cjs.11770
+https://onlinelibrary.wiley.com/doi/10.1002/cjs.11770
 
-Fishbone, J.A., Mili, L. (2023?). Highly Robust Complex Covariance Estimators with Applications to Sensor Array Processing.
-...
+Fishbone, J.A., Mili, L. (2023). "Highly Robust Complex Covariance Estimators with Applications to Sensor Array Processing." IEEE Open Journal of Signal Processing, doi: 10.1109/OJSP.2023.3261806
+https://ieeexplore.ieee.org/document/10081068
+
 
 INSTALLATION
 1) Run add_paths from this directory
@@ -39,20 +41,20 @@ Execute an S-estimate using the sEst command:
 % estFun          FUNCTION NAME                 tun     REQUIRED distParms
 % 'BISQ'          - S-Bisquare                  - N/A   - N/A
 % 'ROCKE'         - S-Rocke                     - gamma - N/A
-% 'QCAUCHY'       - S-q Cauchy                  - q     - N/A
-% 'QGAUSS'        - S-q Gaussian (i.e. Normal)  - q     - N/A
+% 'QCAUCHY'       - Sq Cauchy                   - q     - N/A
+% 'QGAUSS'        - Sq Gaussian (i.e. Normal)   - q     - N/A
 % 'QGAUSSIAN'     - SAME AS 'QGAUSS'
-% 'QGENHYPER'     - S-q Generalized Hyperbolic  - q     - distParms.chi, distParms.lambda, distParms.psi
-% 'QKOTZ'         - S-q Kotz Type               - q     - distParms.N, distParms.r, distParms.s
-% 'QMVHYPERBOLIC' - S-q Multivariate Hyperbolic - q     - distParms.chi, distParms.psi
+% 'QGENHYPER'     - Sq Generalized Hyperbolic   - q     - distParms.chi, distParms.lambda, distParms.psi
+% 'QKOTZ'         - Sq Kotz Type                - q     - distParms.N, distParms.r, distParms.s
+% 'QMVHYPERBOLIC' - Sq Multivariate Hyperbolic  - q     - distParms.chi, distParms.psi
 % 'QNORMAL'       - SAME AS 'QGAUSS'
-% 'QNORMINVGAUSS' - S-q Normal Inverse Gaussian - q     - distParms.chi, distParms.psi
-% 'QLAPLACE'      - S-q Laplace                 - q     - N/A
-% 'QLOGISTIC'     - S-q Logistic                - q     - N/A
-% 'QPEARSONII'    - S-q Pearson Type II         - q     - distParms.m
-% 'QPEARSONVII'   - S-q Pearson Type VII        - q     - distParms.N, distParms.s
-% 'QT'            - S-q t-Distribution          - q     - distParms.nu
-% 'QVARGAMMA'     - S-q Variance Gamma          - q     - distParms.lambda, distParms.psi
+% 'QNORMINVGAUSS' - Sq Normal Inverse Gaussian  - q     - distParms.chi, distParms.psi
+% 'QLAPLACE'      - Sq Laplace                  - q     - N/A
+% 'QLOGISTIC'     - Sq Logistic                 - q     - N/A
+% 'QPEARSONII'    - Sq Pearson Type II          - q     - distParms.m
+% 'QPEARSONVII'   - Sq Pearson Type VII         - q     - distParms.N, distParms.s
+% 'QT'            - Sq t-Distribution           - q     - distParms.nu
+% 'QVARGAMMA'     - Sq Variance Gamma           - q     - distParms.lambda, distParms.psi
 %
 
 
