@@ -293,7 +293,7 @@ classdef SEstimator < handle % S-Estimator
                 % Calculate error metric
                 % If we've enlarged tun, then ensure we've had 3 iterations
                 if ~enlarged_tun || i > 3 % Set to 3 b/c if we hit xi limit on i==3
-                   err = trace(shapeHatNext\shapeHatPrev)-obj.p; 
+                   err = real(trace(shapeHatNext\shapeHatPrev))-obj.p; 
                 end
 
                 % Reset tun if we're not holding it for the run
